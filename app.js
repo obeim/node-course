@@ -16,6 +16,9 @@ app.get('/',(req,res)=>{
 app.get('/about',(req,res)=>{
 res.render('about',{title:'about'})
 })
+app.get('/Projects',(req,res)=>{
+    res.render('projects',{title:"My Projects"});
+})
 app.listen(port,()=>{
 console.log(`listening in port ${port}`)
 })
