@@ -3,7 +3,7 @@ const express=require('express');
 const hbs=require('hbs');
 const app=express();
 
-
+const port=process.env.PORT || 3000;
 hbs.registerHelper('getCurrentYear',()=>{
     return new Date().getFullYear();
 })
@@ -16,6 +16,6 @@ app.get('/',(req,res)=>{
 app.get('/about',(req,res)=>{
 res.render('about',{title:'about'})
 })
-app.listen(3000,()=>{
-console.log('listening on port 3000')
+app.listen(port,()=>{
+console.log(`listening in port ${port}`)
 })
